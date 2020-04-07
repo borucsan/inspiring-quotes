@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import "./App.css";
 
-function App() {
+export function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Inspiring quote</h1>
+      <Quote text="To be, or not to be..." author="Hamlet" />
     </div>
   );
 }
 
-export default App;
+export function Quote({ text, author }) {
+  return (
+    <blockquote>
+      <p>{text}</p>
+      <cite>{author}</cite>
+    </blockquote>
+  );
+}
